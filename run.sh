@@ -8,6 +8,12 @@ echo "Waiting for database to be ready..."
 python -c "
 import time
 import psycopg2
+import sys
+import os
+
+# Add src to Python path
+sys.path.insert(0, os.path.join(os.getcwd(), 'src'))
+
 from config.settings import settings
 
 while True:
