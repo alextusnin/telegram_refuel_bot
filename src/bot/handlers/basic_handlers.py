@@ -22,13 +22,17 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"🚗 Welcome to the Refuel Tracker Bot, {user.first_name}!\n\n"
             "I help you track your vehicle's fuel consumption and costs.\n\n"
             "Available commands:\n"
+            "• /addcar - Add a new car to your account\n"
+            "• /cars - View all your cars\n"
+            "• /setdefault - Set your default car\n"
+            "• /deletecar - Delete a car (with confirmation)\n"
             "• /add - Add a new refuel entry\n"
             "• /recent - View recent refuel entries\n"
             "• /stats - View fuel consumption statistics\n"
-            "• /help - Show detailed help information\n"
-            "• /me - Show your account information\n\n"
+            "• /me - Show your account information\n"
+            "• /help - Show detailed help information\n\n"
             f"✅ Your account has been set up! (User ID: {db_user.id})\n"
-            "Let's start tracking your fuel efficiency! ⛽"
+            "Let's start by adding your first car with /addcar! ⛽"
         )
         
         await update.message.reply_text(welcome_message)
